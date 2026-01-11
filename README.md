@@ -141,7 +141,7 @@ Full deployment
 
 👨‍💻 Author
 
-Nikhil Rangarej
+Nagrah Rangarej
 B.Tech – Artificial Intelligence & Data Science
 Uka Tarsadia University
 
