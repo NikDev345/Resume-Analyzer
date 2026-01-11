@@ -152,3 +152,6 @@ If this project helped you or inspired you, consider giving it a ⭐ on GitHub.
 ⚠️ Note
 
 This project focuses on clarity and explainability, not black-box AI — because understanding why matters.
+
+Licesince 
+you can use it for you school or college project freely for educationall purpose
