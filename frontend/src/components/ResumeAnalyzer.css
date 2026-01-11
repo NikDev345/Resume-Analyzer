@@ -1,0 +1,180 @@
+/* ===== PAGE WRAPPER ===== */
+.analyzer-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  background:
+    radial-gradient(800px circle at 20% 10%, rgba(140, 70, 255, 0.15), transparent 40%),
+    radial-gradient(800px circle at 80% 90%, rgba(90, 40, 200, 0.18), transparent 40%),
+    linear-gradient(180deg, #07020f, #040108);
+  color: #ece9ff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ===== MAIN CARD ===== */
+.analyzer-card {
+  width: 100%;
+  max-width: 760px;
+  padding: 48px 48px 44px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 0 0 1px rgba(180, 90, 255, 0.15),
+    0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.analyzer-card h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.4px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ===== INPUTS ===== */
+textarea {
+  width: 100%;
+  min-height: 160px;
+  background: rgba(20, 10, 40, 0.9);
+  border: 1px solid rgba(160, 90, 255, 0.25);
+  color: #f3f1ff;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  resize: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  outline: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgba(200, 180, 255, 0.45);
+}
+
+textarea:focus,
+input:focus {
+  border-color: rgba(180, 110, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(180, 110, 255, 0.35);
+}
+
+/* ===== ROLE INPUT ===== */
+input {
+  width: 100%;
+  padding: 16px 18px;
+  background: rgba(20, 10, 40, 0.9);
+  border: 1px solid rgba(160, 90, 255, 0.25);
+  color: #f3f1ff;
+  border-radius: 16px;
+  margin-bottom: 26px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* ===== ANALYZE BUTTON ===== */
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #8a2cff, #b35cff);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:
+    0 10px 30px rgba(150, 80, 255, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 45px rgba(170, 100, 255, 0.65),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESULT SECTION ===== */
+.result-section {
+  margin-top: 42px;
+  padding-top: 34px;
+  border-top: 1px solid rgba(160, 90, 255, 0.2);
+}
+
+/* ===== SCORE ===== */
+.score {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.score span {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #b35cff, #7b2cff);
+  -webkit-background-clip: text;
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+}
+
+.score p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.skills h4 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  font-size: 0.9rem;
+  padding: 6px 0;
+}
+
+/* ===== SKILL COLORS ===== */
+.matched {
+  color: #7dffb3;
+}
+
+.missing {
+  color: #ff7d7d;
+}
+
+/* ===== VERDICT ===== */
+.verdict {
+  margin-top: 36px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+}

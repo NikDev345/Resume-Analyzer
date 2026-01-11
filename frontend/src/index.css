@@ -1,0 +1,25 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT FIX (CRITICAL) */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* BODY */
+body {
+  background: #040108;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cursor glow variables */
+:root {
+  --x: 50%;
+  --y: 50%;
+}

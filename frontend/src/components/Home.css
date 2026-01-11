@@ -1,0 +1,78 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b0216, #05010a);
+  overflow: hidden;
+  color: #eae6ff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Purple grid */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(180, 90, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 90, 255, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle at center, black 45%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Cursor glow */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(160, 80, 255, 0.18),
+    transparent 45%
+  );
+}
+
+/* Main content */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 120px 80px;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.content h1 span {
+  background: linear-gradient(90deg, #b35cff, #7b2cff);
+  -webkit-background-clip: text;
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+}
+
+.content p {
+  margin-top: 24px;
+  font-size: 1.2rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.content button {
+  margin-top: 40px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(90deg, #8a2cff, #b35cff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(140, 70, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 50px rgba(160, 100, 255, 0.7);
+}
