@@ -1,13 +1,14 @@
 /* ===== PAGE WRAPPER ===== */
 .analyzer-page {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 24px;
   background:
-    radial-gradient(800px circle at 20% 10%, rgba(140, 70, 255, 0.15), transparent 40%),
-    radial-gradient(800px circle at 80% 90%, rgba(90, 40, 200, 0.18), transparent 40%),
+    radial-gradient(900px circle at 20% 10%, rgba(140, 70, 255, 0.18), transparent 40%),
+    radial-gradient(900px circle at 80% 90%, rgba(90, 40, 200, 0.2), transparent 40%),
     linear-gradient(180deg, #07020f, #040108);
   color: #ece9ff;
   font-family: "Inter", system-ui, sans-serif;
@@ -17,7 +18,7 @@
 .analyzer-card {
   width: 100%;
   max-width: 760px;
-  padding: 48px 48px 44px;
+  padding: 48px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(18px);
@@ -31,7 +32,6 @@
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 10px;
-  letter-spacing: 0.4px;
 }
 
 .subtitle {
@@ -41,7 +41,7 @@
   line-height: 1.6;
 }
 
-/* ===== INPUTS ===== */
+/* ===== TEXTAREA ===== */
 textarea {
   width: 100%;
   min-height: 160px;
@@ -57,18 +57,16 @@ textarea {
   outline: none;
 }
 
-textarea::placeholder,
-input::placeholder {
+textarea::placeholder {
   color: rgba(200, 180, 255, 0.45);
 }
 
-textarea:focus,
-input:focus {
+textarea:focus {
   border-color: rgba(180, 110, 255, 0.7);
   box-shadow: 0 0 0 1px rgba(180, 110, 255, 0.35);
 }
 
-/* ===== ROLE INPUT ===== */
+/* ===== INPUT ===== */
 input {
   width: 100%;
   padding: 16px 18px;
@@ -81,14 +79,23 @@ input {
   outline: none;
 }
 
-/* ===== ANALYZE BUTTON ===== */
+input::placeholder {
+  color: rgba(200, 180, 255, 0.45);
+}
+
+input:focus {
+  border-color: rgba(180, 110, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(180, 110, 255, 0.35);
+}
+
+/* ===== BUTTON ===== */
 button {
   width: 100%;
   padding: 16px;
   border-radius: 18px;
   background: linear-gradient(90deg, #8a2cff, #b35cff);
   border: none;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -128,7 +135,6 @@ button:disabled {
   font-weight: 700;
   background: linear-gradient(90deg, #b35cff, #7b2cff);
   -webkit-background-clip: text;
-  background-clip: border-box;
   -webkit-text-fill-color: transparent;
 }
 
@@ -138,43 +144,108 @@ button:disabled {
   opacity: 0.7;
 }
 
-/* ===== SKILLS GRID ===== */
-.skills {
+/* ================================================= */
+/* ===== NEW SKILL CARDS (MATCHES OLD THEME) ===== */
+/* ================================================= */
+
+.skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 32px;
+  margin-bottom: 32px;
 }
 
-.skills h4 {
+.skill-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(20, 10, 40, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    inset 0 0 0 1px rgba(160, 90, 255, 0.15),
+    0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+.skill-card h4 {
   font-size: 1rem;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   opacity: 0.85;
 }
 
-.skills ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* MATCHED CARD */
+.matched-card {
+  box-shadow:
+    inset 0 0 0 1px rgba(120, 255, 190, 0.35),
+    0 10px 35px rgba(0, 0, 0, 0.45);
 }
 
-.skills li {
-  font-size: 0.9rem;
-  padding: 6px 0;
+/* MISSING CARD */
+.missing-card {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 120, 120, 0.35),
+    0 10px 35px rgba(0, 0, 0, 0.45);
 }
 
-/* ===== SKILL COLORS ===== */
-.matched {
+/* PILLS */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* MATCHED PILL */
+.matched-pill {
   color: #7dffb3;
+  background: rgba(125, 255, 180, 0.12);
+  border: 1px solid rgba(125, 255, 180, 0.45);
 }
 
-.missing {
+/* MISSING PILL */
+.missing-pill {
   color: #ff7d7d;
+  background: rgba(255, 125, 125, 0.12);
+  border: 1px solid rgba(255, 125, 125, 0.45);
+}
+
+.empty {
+  font-size: 0.85rem;
+  opacity: 0.6;
 }
 
 /* ===== VERDICT ===== */
 .verdict {
   margin-top: 36px;
   text-align: center;
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.verdict.bad {
+  color: #ff6b6b;
+}
+
+.verdict.average {
+  color: #facc15;
+}
+
+.verdict.good {
+  color: #7dffb3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analyzer-card {
+    padding: 36px 28px;
+  }
 }
