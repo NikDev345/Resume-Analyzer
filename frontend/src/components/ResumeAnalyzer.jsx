@@ -15,7 +15,7 @@ export default function ResumeAnalyzer() {
       const res = await fetch("http://localhost:5000/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ resume, role })
+        body: JSON.stringify({ resume, role }),
       });
 
       const data = await res.json();
@@ -53,32 +53,57 @@ export default function ResumeAnalyzer() {
 
         {result && (
           <div className="result-section">
+            {/* SCORE */}
             <div className="score">
               <span>{result.score}%</span>
               <p>Skill Match Score</p>
             </div>
 
-            <div className="skills">
-              <div>
-                <h4>Matched Skills</h4>
-                <ul>
-                  {result.matched_skills.map((s, i) => (
-                    <li key={i} className="matched">{s}</li>
-                  ))}
-                </ul>
+            {/* SKILL CARDS */}
+            <div className="skills-grid">
+              {/* Matched Skills */}
+              <div className="skill-card matched-card">
+                <h4>Matched Skills ({result.matched_skills.length})</h4>
+                <div className="skill-pills">
+                  {result.matched_skills.length > 0 ? (
+                    result.matched_skills.map((s, i) => (
+                      <span key={i} className="pill matched-pill">
+                        {s}
+                      </span>
+                    ))
+                  ) : (
+                    <p className="empty">No matched skills</p>
+                  )}
+                </div>
               </div>
 
-              <div>
-                <h4>Missing Skills</h4>
-                <ul>
-                  {result.missing_skills.map((s, i) => (
-                    <li key={i} className="missing">{s}</li>
-                  ))}
-                </ul>
+              {/* Missing Skills */}
+              <div className="skill-card missing-card">
+                <h4>Missing Skills ({result.missing_skills.length})</h4>
+                <div className="skill-pills">
+                  {result.missing_skills.length > 0 ? (
+                    result.missing_skills.map((s, i) => (
+                      <span key={i} className="pill missing-pill">
+                        {s}
+                      </span>
+                    ))
+                  ) : (
+                    <p className="empty">No missing skills</p>
+                  )}
+                </div>
               </div>
             </div>
 
-            <div className="verdict">
+            {/* VERDICT */}
+            <div
+              className={`verdict ${
+                result.score < 40
+                  ? "bad"
+                  : result.score < 70
+                  ? "average"
+                  : "good"
+              }`}
+            >
               {result.score < 40 && "❌ Needs Improvement"}
               {result.score >= 40 && result.score < 70 && "⚠️ Average Fit"}
               {result.score >= 70 && "✅ Strong Fit"}
