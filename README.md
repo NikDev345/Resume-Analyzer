@@ -1,61 +1,67 @@
-🧬 AI Resume Analyzer
+📄 Resume Analyzer (React + Flask)
 
-Understand your resume. Expose your skill gaps. Get career-ready.
+A clean, modern Resume Analyzer web application that evaluates how well a resume matches a selected job role by analyzing skills and generating a Skill Match Score.
 
-🚀 What is this?
+This project focuses on clarity, simplicity, and real-world usability, combining a polished frontend with a lightweight backend.
 
-AI Resume Analyzer is a smart web application that evaluates a resume against a target job role and tells you how ready you actually are.
+✨ Features
 
-Not opinions.
-Not vague feedback.
-Just clear skill matching, gaps, and direction.
+🔍 Resume Skill Analysis
+Paste resume content and analyze it against a target job role.
 
-Built for students, freshers, and anyone trying to align their skills with real industry roles.
+📊 Skill Match Score
+Percentage-based score showing how well the resume fits the role.
 
-🧠 Why this exists
+✅ Matched Skills
+Skills found in the resume that align with job requirements.
 
-Most people ask:
+❌ Missing Skills
+Important skills required for the role but not present in the resume.
 
-“Is my resume good enough?”
+🎯 Clear Verdict System
 
-“What skills am I missing?”
+❌ Needs Improvement
 
-“Why am I not getting shortlisted?”
+⚠️ Average Fit
 
-This project answers those questions using:
+✅ Strong Fit
 
-Resume text analysis
+🌙 Premium Dark UI
 
-Role-based skill comparison
+Glassmorphism design
 
-Career readiness scoring
+Smooth gradients
 
-✨ What it does (at a glance)
+Modern SaaS-style layout
 
-📄 Analyze resume text
+🧠 How It Works
 
-🎯 Compare against a chosen job role
+User pastes resume text
 
-📊 Calculate skill match percentage
+User selects / enters a target role
 
-✅ Highlight strengths
+Backend:
 
-❌ Expose missing skills
+Normalizes text (case, punctuation, formatting)
 
-🧭 Show a career-readiness verdict
+Matches resume content against predefined role skills
 
-All inside a modern dark AI-style interface.
+Calculates a match score
 
-🖥️ Tech Behind the Scenes
+Frontend:
+
+Displays score
+
+Shows matched & missing skills as visual cards
+
+Provides a clear verdict
+
+🛠️ Tech Stack
 Frontend
 
-React (Vite)
+React
 
-JavaScript
-
-Modern CSS (Glassmorphism, Dark UI)
-
-React Router
+CSS (Custom Glassmorphism UI)
 
 Backend
 
@@ -63,95 +69,95 @@ Python
 
 Flask
 
-REST API
+Flask-CORS
 
-Rule-based NLP logic
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/resume-analyzer.git
+cd resume-analyzer
 
-🧩 How it Works (Simple Flow)
-Resume Text + Target Role
-          ↓
-   Skill Extraction
-          ↓
-   Role Skill Matching
-          ↓
-   Score Calculation
-          ↓
-   Career Readiness Result
-
-
-No heavy ML — fast, explainable, and practical.
-
-🧪 Try It Yourself
-Example Role
-Data Scientist
-
-Example Resume Skills
-Python, SQL, Pandas, Machine Learning, Git
-
-Output You’ll See
-
-Skill Match Score (e.g. 65%)
-
-Matched Skills
-
-Missing Skills
-
-Verdict: Average Fit / Strong Fit / Needs Improvement
-
-▶️ Run the Project Locally
-Backend
+2️⃣ Backend Setup (Flask)
 cd backend
-pip install -r requirement.txt
-python app.py
+pip install flask flask-cors
+python main.py
 
-Frontend
+
+Backend runs on:
+
+http://localhost:5000
+
+3️⃣ Frontend Setup (React)
 cd frontend
 npm install
-npm run dev
+npm start
 
-🌌 What Makes This Project Different
 
-Not a “toy” resume checker
+Frontend runs on:
 
-Designed as a career guidance tool
+http://localhost:3000
 
-Clean UI inspired by real AI products
+🧪 Example Roles Supported
+
+Data Scientist
+
+Web Developer
+
+Software Engineer
+
+Teacher
+
+Actor
+
+(Roles can be easily extended in main.py.)
+
+🎯 Example Output
+
+Skill Match Score: 70%
+
+Matched Skills: Python, Pandas, NumPy
+
+Missing Skills: Statistics, Machine Learning
+
+Verdict: ⚠️ Average Fit
+
+📌 Why This Project?
+
+Clean separation of frontend and backend
+
+Focus on practical skill matching, not buzzwords
+
+Strong UI/UX for demos and interviews
 
 Easy to extend with:
 
-PDF uploads
+More roles
 
-Skill weighting
+Advanced NLP
 
-AI explanations
+Resume upload (PDF/DOCX)
 
-Visual analytics
+AI-powered suggestions
 
-🔮 Future Vision
+🔮 Future Improvements (Optional)
+
+Job description upload
+
+Skill importance weighting
 
 Resume PDF parsing
 
-AI-generated improvement suggestions
+Role auto-suggestions
 
-Experience-based analysis
+AI-based resume improvement tips
 
-Skill roadmap recommendations
+👤 Author
 
-Full deployment
-
-👨‍💻 Author
-
-Nagrah Rangarej
+Nikhil Rangarej
 B.Tech – Artificial Intelligence & Data Science
-Uka Tarsadia University
 
-⭐ Like the idea?
+⭐ Final Note
 
-If this project helped you or inspired you, consider giving it a ⭐ on GitHub.
+This project is intentionally simple, readable, and scalable.
+It demonstrates both frontend polish and backend logic clarity, making it suitable for learning, demos, and portfolio use.
 
-⚠️ Note
-
-This project focuses on clarity and explainability, not black-box AI — because understanding why matters.
-
-Licesince 
-you can use it for you school or college project freely for educationall purpose
+If you like it, feel free to ⭐ the repository.
