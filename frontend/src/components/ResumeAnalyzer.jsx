@@ -31,7 +31,7 @@ export default function ResumeAnalyzer() {
       <div className="analyzer-card">
         <h2>Resume Analysis</h2>
         <p className="subtitle">
-          Paste your resume and choose a target role to evaluate your career readiness.
+          Paste your resume and choose a target role to evaluate your job readiness.
         </p>
 
         <textarea
@@ -53,15 +53,20 @@ export default function ResumeAnalyzer() {
 
         {result && (
           <div className="result-section">
-            {/* SCORE */}
+            {/* SKILL MATCH SCORE */}
             <div className="score">
-              <span>{result.score}%</span>
+              <span>{result.skill_match_score}%</span>
               <p>Skill Match Score</p>
             </div>
 
-            {/* SKILL CARDS */}
+            {/* ATS SCORE */}
+            <div className="score ats-score">
+              <span>{result.ats_score}%</span>
+              <p>ATS Compatibility</p>
+            </div>
+
+            {/* SKILLS */}
             <div className="skills-grid">
-              {/* Matched Skills */}
               <div className="skill-card matched-card">
                 <h4>Matched Skills ({result.matched_skills.length})</h4>
                 <div className="skill-pills">
@@ -77,7 +82,6 @@ export default function ResumeAnalyzer() {
                 </div>
               </div>
 
-              {/* Missing Skills */}
               <div className="skill-card missing-card">
                 <h4>Missing Skills ({result.missing_skills.length})</h4>
                 <div className="skill-pills">
@@ -94,20 +98,52 @@ export default function ResumeAnalyzer() {
               </div>
             </div>
 
-            {/* VERDICT */}
+            {/* SKILL FIT VERDICT */}
             <div
               className={`verdict ${
-                result.score < 40
+                result.skill_match_score < 40
                   ? "bad"
-                  : result.score < 70
+                  : result.skill_match_score < 70
                   ? "average"
                   : "good"
               }`}
             >
-              {result.score < 40 && "❌ Needs Improvement"}
-              {result.score >= 40 && result.score < 70 && "⚠️ Average Fit"}
-              {result.score >= 70 && "✅ Strong Fit"}
+              {result.skill_match_score < 40 && "❌ Poor Skill Match"}
+              {result.skill_match_score >= 40 &&
+                result.skill_match_score < 70 &&
+                "⚠️ Average Skill Match"}
+              {result.skill_match_score >= 70 && "✅ Strong Skill Match"}
             </div>
+
+            {/* ATS VERDICT */}
+            <div className="ats-verdict">
+              <h4>ATS Verdict</h4>
+              <p>{result.ats_verdict}</p>
+            </div>
+
+            {/* ISSUES */}
+            {result.issues_found.length > 0 && (
+              <div className="issues">
+                <h4>Issues Detected</h4>
+                <ul>
+                  {result.issues_found.map((issue, i) => (
+                    <li key={i}>{issue}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* IMPROVEMENT TIPS */}
+            {result.improvement_tips.length > 0 && (
+              <div className="tips">
+                <h4>Improvement Tips</h4>
+                <ul>
+                  {result.improvement_tips.map((tip, i) => (
+                    <li key={i}>{tip}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         )}
       </div>
