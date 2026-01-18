@@ -6,6 +6,7 @@ This project focuses on clarity, simplicity, and real-world usability, combining
 
 ✨ Features
 
+
 🔍 Resume Skill Analysis
 Paste resume content and analyze it against a target job role.
 
@@ -17,6 +18,79 @@ Skills found in the resume that align with job requirements.
 
 ❌ Missing Skills
 Important skills required for the role but not present in the resume.
+
+🧠 ATS Compatibility Score (NEW 🔥)
+
+Modern companies use Applicant Tracking Systems (ATS) to auto-filter resumes before a human ever sees them.
+
+This project now includes an ATS Score (0–100) that estimates whether a resume is likely to pass those systems.
+
+The ATS score is calculated using four real factors:
+
+📌 a) Keyword Density (40%)
+
+Checks how naturally and frequently role-specific keywords appear
+
+Penalizes low repetition or weak keyword presence
+
+📌 b) Resume Structure (25%)
+
+Checks for essential sections like:
+
+Education
+
+Experience
+
+Skills
+
+Projects
+
+Certifications
+
+Missing sections reduce ATS score.
+
+📌 c) Formatting Safety (20%)
+
+Detects ATS-unfriendly elements such as:
+
+Icons
+
+Special symbols (★ ● ▪ ✓)
+
+Decorative characters
+
+Clean, text-based resumes score higher.
+
+📌 d) Resume Length Optimization (15%)
+
+Ideal range: 300–900 words
+
+Too short or too long resumes are penalized
+
+🧾 ATS Verdict Output
+
+Along with the score, the system provides:
+
+ATS Verdict (Excellent / Good / Poor)
+
+Detected Issues
+
+Clear Improvement Tips
+
+Example:
+
+{
+  "ats_score": 72,
+  "ats_verdict": "Good – likely to pass ATS",
+  "issues_found": [
+    "Missing important resume sections",
+    "Low keyword repetition for target role"
+  ],
+  "improvement_tips": [
+    "Add Projects and Certifications section",
+    "Repeat core skills naturally 2–3 times"
+  ]
+}
 
 🎯 Clear Verdict System
 
