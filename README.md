@@ -23,6 +23,18 @@ Resume Upload → Text Extraction → Section Detection
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/placeholder/resume-analyzer-flow.gif" width="80%" /> </p>
 
+<details>
+  <summary><b>🔍 Click to See Resume Analysis Logic</b></summary>
+
+### Step-by-Step Logic
+1. Resume uploaded (PDF/DOCX)
+2. Text extracted
+3. Sections detected
+4. Skills normalized
+5. ATS-style score generated
+
+</details>
+
 🔥 Key Features
 📄 Resume Parsing
 
