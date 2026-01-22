@@ -15,6 +15,20 @@ Section depth
 Scoring realism
 
 The architecture is intentionally built to support future AI/ML enhancements such as semantic job matching and feedback intelligence.
+flowchart TD
+    U[User Uploads Resume<br/>(PDF / DOCX)]
+    P[Text Extraction Engine]
+    S[Section Detection<br/>(Experience · Skills · Projects · Education)]
+    K[Skill Extraction & Normalization]
+    R[ATS-Style Resume Scoring]
+    O[Structured JSON Output]
+
+    U --> P
+    P --> S
+    S --> K
+    K --> R
+    R --> O
+
 
 ✨ Live System Flow (Animated)
 Resume Upload → Text Extraction → Section Detection
