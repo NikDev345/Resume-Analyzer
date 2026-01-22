@@ -1,5 +1,7 @@
 🚀 Resume Analyzer — Intelligent ATS-Style Resume Scoring System
 <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=900&lines=FastAPI+%7C+NLP+Backend+System;ATS-Style+Resume+Parsing+and+Scoring;PDF+%26+DOCX+Resume+Analysis;Built+for+Scalability+and+Future+AI+Extensions" /> </p> <p align="center"> <b>An intelligent backend system that parses resumes, extracts structured insights, and generates ATS-style resume scores using NLP.</b> </p>
+---------------------------------------------------------------------------------------
+
 🧠 Project Overview
 
 * Resume Analyzer is a backend-driven NLP system designed to analyze resumes the way real Applicant Tracking Systems (ATS) do.
@@ -16,6 +18,7 @@ Realistic scoring, not inflated results
 
 The architecture is intentionally designed to support future AI/ML enhancements such as semantic job matching and automated resume feedback.
 
+---------------------------------------------------------------------------------------
 🔥 Key Features
 
 📄 Resume Parsing
@@ -25,6 +28,8 @@ Supports PDF and DOCX
 Clean text extraction
 
 Handles real-world resume formatting
+
+---------------------------------------------------------------------------------------
 
 🧩 Section Detection
 
@@ -37,6 +42,8 @@ Skills
 Projects
 
 Education
+
+---------------------------------------------------------------------------------------
 
 🛠️ Skill Extraction & Normalization
 
@@ -64,6 +71,8 @@ Skill diversity
 
 Prevents artificial score inflation
 
+---------------------------------------------------------------------------------------
+
 ⚙️ Tech Stack
 
 | Layer         | Technology              |
@@ -73,6 +82,8 @@ Prevents artificial score inflation
 | ML (Optional) | Sentence Transformers   |
 | Parsing       | pdfplumber, python-docx |
 | Language      | Python 3.10+            |
+
+---------------------------------------------------------------------------------------
 
 ## ⚙️ System Status
 
@@ -90,6 +101,7 @@ Prevents artificial score inflation
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---------------------------------------------------------------------------------------
+```bash
 🚀 Getting Started
 git clone https://github.com/your-username/resume-analyzer.git
 cd resume-analyzer/backend
@@ -103,6 +115,9 @@ python -m spacy download en_core_web_sm
 uvicorn main:app --reload
 
 Open 👉 http://127.0.0.1:8000/docs
+```
+
+---------------------------------------------------------------------------------------
 
 🛣️ Engineering Roadmap
 
@@ -120,6 +135,7 @@ Open 👉 http://127.0.0.1:8000/docs
 
  Semantic Job Matching
 
+---------------------------------------------------------------------------------------
 
  👨‍💻 Author
 
@@ -128,7 +144,13 @@ B.Tech – Artificial Intelligence & Data Science
 
 Backend • NLP • Intelligent Systems
 
+---------------------------------------------------------------------------------------
+
+```text
 “Build systems that think structurally before thinking statistically.”
+```
+
+---------------------------------------------------------------------------------------
 
 ⭐ Support
 
