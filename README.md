@@ -81,3 +81,20 @@ Scalable & production-ready
 📸 API Demo (Live Testing)
 <p align="center"> <img src="https://user-images.githubusercontent.com/placeholder/swagger-demo.gif" width="85%" /> </p>
 
+🧠 Example API Response
+{
+  "sections_found": ["experience", "skills", "projects", "education"],
+  "skills": [
+    "python",
+    "machine learning",
+    "deep learning",
+    "nlp",
+    "fastapi",
+    "docker",
+    "pytorch",
+    "tensorflow",
+    "sql",
+    "java"
+  ],
+  "resume_score": 71
+}
