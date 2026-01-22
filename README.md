@@ -159,6 +159,13 @@ Role-based scoring (ML Engineer, Backend Dev, etc.)
 
 Exportable reports (PDF)
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Status](https://img.shields.io/badge/Status-Phase%201%20Complete-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
+
 👨‍💻 Author
 
 Nagraj Rangarej
