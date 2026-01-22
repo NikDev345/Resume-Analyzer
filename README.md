@@ -22,3 +22,62 @@ Resume Upload → Text Extraction → Section Detection
               → Structured JSON Output
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/placeholder/resume-analyzer-flow.gif" width="80%" /> </p>
+
+🔥 Key Features
+📄 Resume Parsing
+
+Supports PDF and DOCX
+
+Clean text extraction
+
+Handles real-world resume formatting
+
+🧩 Section Detection
+
+Automatically identifies:
+
+Experience
+
+Skills
+
+Projects
+
+Education
+
+🛠️ Skill Extraction & Normalization
+
+Canonical skill mapping
+
+Handles variations like:
+
+ML → Machine Learning
+
+DL → Deep Learning
+
+Avoids duplicate & noisy skills
+
+📊 ATS-Style Resume Scoring
+
+Scores resumes on a 0–100 scale
+
+Considers:
+
+Section presence
+
+Section depth
+
+Skill diversity
+
+Prevents score inflation
+
+⚡ FastAPI Backend
+
+Modular service-based architecture
+
+Swagger UI for instant testing
+
+Scalable & production-ready
+
+📸 API Demo (Live Testing)
+<p align="center"> <img src="https://user-images.githubusercontent.com/placeholder/swagger-demo.gif" width="85%" /> </p>
+
