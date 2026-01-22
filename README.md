@@ -1,5 +1,6 @@
 🚀 Resume Analyzer — Intelligent ATS-Style Resume Scoring System
 <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=900&lines=FastAPI+%7C+NLP+Backend+System;ATS-Style+Resume+Parsing+and+Scoring;PDF+%26+DOCX+Resume+Analysis;Built+for+Scalability+and+Future+AI+Extensions" /> </p> <p align="center"> <b>An intelligent backend system that parses resumes, extracts structured insights, and generates ATS-style resume scores using NLP.</b> </p>
+
 ---------------------------------------------------------------------------------------
 
 🧠 Project Overview
@@ -144,7 +145,6 @@ B.Tech – Artificial Intelligence & Data Science
 
 Backend • NLP • Intelligent Systems
 
----------------------------------------------------------------------------------------
 
 ```text
 “Build systems that think structurally before thinking statistically.”
