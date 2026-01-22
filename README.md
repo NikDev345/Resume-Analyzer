@@ -98,3 +98,75 @@ Scalable & production-ready
   ],
   "resume_score": 71
 }
+
+⚙️ Tech Stack
+
+| Layer         | Technology              |
+| ------------- | ----------------------- |
+| Backend       | FastAPI                 |
+| NLP           | spaCy                   |
+| ML (Optional) | Sentence Transformers   |
+| Parsing       | pdfplumber, python-docx |
+| Language      | Python 3.10+            |
+
+🚀 Getting Started
+1️⃣ Clone Repository
+git clone https://github.com/your-username/resume-analyzer.git
+cd resume-analyzer/backend
+
+2️⃣ Create Virtual Environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+
+4️⃣ Run Server
+uvicorn main:app --reload
+
+5️⃣ Test API
+
+Open 👉 http://127.0.0.1:8000/docs
+
+🧪 Tested Scenarios
+
+Student resumes
+
+Technical resumes
+
+NLP-heavy profiles
+
+Backend developer profiles
+
+🛑 What This Project Is NOT
+
+❌ Not a keyword-only matcher
+
+❌ Not a frontend-heavy demo
+
+❌ Not over-engineered with unnecessary transformers
+
+🔮 Future Enhancements (Planned)
+
+Resume ↔ Job Description semantic matching
+
+Resume improvement feedback engine
+
+Frontend dashboard (React)
+
+Role-based scoring (ML Engineer, Backend Dev, etc.)
+
+Exportable reports (PDF)
+
+👨‍💻 Author
+
+Nagraj Rangarej
+B.Tech – Artificial Intelligence & Data Science
+Backend | NLP | Intelligent Systems
+
+“Build systems that think structurally before thinking statistically.”
+
+⭐ If You Like This Project
+
+Give it a ⭐ — it helps visibility and motivates further development.
