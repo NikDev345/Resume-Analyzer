@@ -29,7 +29,7 @@ $ uvicorn main:app --reload
 INFO:     Uvicorn running on http://127.0.0.1:8000
 INFO:     Application startup complete.
 
-
+```
 
 🔥 Key Features
 📄 Resume Parsing
