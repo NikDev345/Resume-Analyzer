@@ -150,11 +150,10 @@ Backend • NLP • Intelligent Systems
 “Build systems that think structurally before thinking statistically.”
 ```
 
-will update this repo soon 
-stay tuned
-
----------------------------------------------------------------------------------------
+---
 
 ⭐ Support
 
 If this project helped or inspired you, consider giving it a ⭐.
+
+THANK YOU <3
